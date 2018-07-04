@@ -23,6 +23,7 @@ ___
     2. In order to allow password authentication for some users or a user type these: <br />
     3. __*sshd_config*__ file type ``` Match user ``` or ``` Match *, !specificuser ``` <br />
     ``` PasswordAuthentication yes (or no) ``` <br />
+    4. Finally run ``` systemctl restart ssh ```
 
 4. Finally Login using ``` shh user@ipaddress -i /location/to/private/key ``` 
 
