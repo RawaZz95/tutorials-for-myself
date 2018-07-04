@@ -19,11 +19,12 @@ ___
     4. Then Run ``` chmod 644 .ssh/authorized_keys ``` again in the home directory.<br />
 
 3. Run ``` sudo vim /etc/ssh/sshd_config ``` on the server machine. <br />
-    1. Find __#PasswordAuthentication yes__ then uncomment it and change __yes__ to __no__ <br />
-    2. In order to allow password authentication for some users or a user type these: <br />
-    3. __*sshd_config*__ file type ``` Match user ``` or ``` Match *, !specificuser ``` <br />
-    ``` PasswordAuthentication yes (or no) ``` <br />
-    4. Finally run ``` systemctl restart ssh ```
+    1. Find __PermitRootLogin yes__ and change it to __yes__ <br />
+    2. Then find __#PasswordAuthentication yes__ then change it to __no__ <br />
+    3. In order to allow password authentication for some users or a user type these: <br />
+    4. __*sshd_config*__ file type ``` Match user ``` <br />
+    ``` PasswordAuthentication yes ``` <br /> to allow ssh login for that user.
+    5. Finally run ``` systemctl restart ssh ```
 
 4. Finally Login using ``` shh user@ipaddress -i /location/to/private/key ``` 
 
