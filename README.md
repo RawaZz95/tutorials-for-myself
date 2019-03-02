@@ -36,3 +36,5 @@ ___
 2. Make ufw deny everything by default using ``` ufw default deny incoming ``` <br />
 3. Allowing default outgoing ``` ufw default allow outgoing ``` <br />
 4. To allow a port, type ``` ufw allow portNumber/tcp ```<br />
+
+## Adding this for fun! <br />
